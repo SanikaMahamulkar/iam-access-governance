@@ -1,0 +1,42 @@
+name: Scheduled IAM Access Review
+
+on:
+  schedule:
+    # Runs monthly on the 1st at 09:00 UTC - adjust cadence as needed
+    - cron: "0 9 1 * *"
+  workflow_dispatch: {}
+
+jobs:
+  access-review:
+    name: Run IAM Access Review
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install boto3
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: eu-west-2
+
+      - name: Run access review
+        run: python scripts/access_review.py
+
+      - name: Generate recertification report
+        run: python scripts/generate_recertification_report.py
+
+      - name: Upload reports as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: access-review-reports
+          path: reports/
