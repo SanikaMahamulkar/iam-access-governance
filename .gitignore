@@ -1,0 +1,5 @@
+# Reports may contain account-specific IDs - keep the tool, not every run's output
+# (we'll keep one sample report as evidence, exclude the rest going forward)
+__pycache__/
+*.pyc
+.DS_Store
