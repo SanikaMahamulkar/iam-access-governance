@@ -1,0 +1,100 @@
+{
+  "generated_at": "2026-09-24T13:55:15.565286+00:00",
+  "stale_threshold_days": 90,
+  "users": [
+    {
+      "username": "sanika-admin",
+      "created": "2026-09-16T22:26:22+00:00",
+      "account_age_days": 7,
+      "has_console_access": true,
+      "mfa_enabled": false,
+      "access_keys": [
+        {
+          "key_id": "AKIA3FLD4MWYA5UPBM3E",
+          "status": "Active",
+          "last_used_days_ago": 0,
+          "stale": false,
+          "never_used": false
+        }
+      ],
+      "attached_policies": [
+        "IAMUserChangePassword",
+        "security-lab-terraform-scoped-policy"
+      ]
+    }
+  ],
+  "roles": [
+    {
+      "role_name": "AWSServiceRoleForAmazonGuardDuty",
+      "created": "2026-09-21T20:32:42+00:00",
+      "account_age_days": 2,
+      "is_service_linked": true,
+      "last_used_days_ago": null,
+      "never_used": true,
+      "stale": false
+    },
+    {
+      "role_name": "AWSServiceRoleForAmazonGuardDutyMalwareProtection",
+      "created": "2026-09-21T20:32:43+00:00",
+      "account_age_days": 2,
+      "is_service_linked": true,
+      "last_used_days_ago": null,
+      "never_used": true,
+      "stale": false
+    },
+    {
+      "role_name": "AWSServiceRoleForResourceExplorer",
+      "created": "2026-09-16T22:09:23+00:00",
+      "account_age_days": 7,
+      "is_service_linked": true,
+      "last_used_days_ago": null,
+      "never_used": true,
+      "stale": false
+    },
+    {
+      "role_name": "AWSServiceRoleForSupport",
+      "created": "2024-03-13T08:37:48+00:00",
+      "account_age_days": 925,
+      "is_service_linked": true,
+      "last_used_days_ago": null,
+      "never_used": true,
+      "stale": false
+    },
+    {
+      "role_name": "AWSServiceRoleForTrustedAdvisor",
+      "created": "2024-03-13T08:37:48+00:00",
+      "account_age_days": 925,
+      "is_service_linked": true,
+      "last_used_days_ago": null,
+      "never_used": true,
+      "stale": false
+    },
+    {
+      "role_name": "security-lab-config-role",
+      "created": "2026-09-21T23:00:39+00:00",
+      "account_age_days": 2,
+      "is_service_linked": false,
+      "last_used_days_ago": null,
+      "never_used": true,
+      "stale": true
+    },
+    {
+      "role_name": "security-lab-lambda-response-role",
+      "created": "2026-09-21T23:22:21+00:00",
+      "account_age_days": 2,
+      "is_service_linked": false,
+      "last_used_days_ago": null,
+      "never_used": true,
+      "stale": true
+    },
+    {
+      "role_name": "security-lab-ssm-instance-role",
+      "created": "2026-09-21T22:22:18+00:00",
+      "account_age_days": 2,
+      "is_service_linked": false,
+      "last_used_days_ago": null,
+      "never_used": true,
+      "stale": true
+    }
+  ]
+}
